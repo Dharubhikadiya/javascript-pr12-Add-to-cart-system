@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <title>Hexashop - Product Detail Page</title>
+
+
+    Additional CSS Files
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+        body {
+            color: #566787;
+            background: #f5f5f5;
+            font-family: 'Varela Round', sans-serif;
+            font-size: 13px;
+        }
+
+        .table-wrapper {
+            background: #fff;
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+        }
+
+        .table-title {
+            padding-bottom: 15px;
+            background: #435d7d;
+            color: #fff;
+            padding: 16px 30px;
+            margin: -20px -25px 10px;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .table-title h2 {
+            margin: 5px 0 0;
+            font-size: 24px;
+        }
+
+        .table-title .btn-group {
+            float: right;
+        }
+
+        .table-title .btn {
+            color: #fff;
+            float: right;
+            font-size: 13px;
+            border: none;
+            min-width: 50px;
+            border-radius: 2px;
+            border: none;
+            outline: none !important;
+            margin-left: 10px;
+        }
+
+        .table-title .btn i {
+            float: left;
+            font-size: 21px;
+            margin-right: 5px;
+        }
+
+        .table-title .btn span {
+            float: left;
+            margin-top: 2px;
+        }
+
+        table.table tr th,
+        table.table tr td {
+            border-color: #e9e9e9;
+            padding: 12px 15px;
+            vertical-align: middle;
+        }
+
+        table.table tr th:first-child {
+            width: 60px;
+        }
+
+        table.table tr th:last-child {
+            width: 100px;
+        }
+
+        table.table-striped tbody tr:nth-of-type(odd) {
+            background-color: #fcfcfc;
+        }
+
+        table.table-striped.table-hover tbody tr:hover {
+            background: #f5f5f5;
+        }
+
+        table.table th i {
+            font-size: 20px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        table th {
+            font-size: 20px;
+        }
+
+        table td {
+            font-size: 18px;
+        }
+
+        table.table td:last-child i {
+            opacity: 0.9;
+            font-size: 22px;
+            margin: 0 5px;
+        }
+
+        table.table td a {
+            font-weight: bold;
+            color: #566787;
+            display: inline-block;
+            text-decoration: none;
+            outline: none !important;
+        }
+
+        table.table td a:hover {
+            color: #2196F3;
+        }
+
+        table.table td a.edit {
+            color: #FFC107;
+        }
+
+        table.table td a.delete {
+            color: #F44336;
+        }
+
+        table.table td i {
+            font-size: 19px;
+        }
+
+        table.table .avatar {
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        button:focus,
+        input:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+
+        /*--------------------------*/
+        .qty-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qty-container .input-qty {
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #d4d4d4;
+            max-width: 70px;
+            margin: 0 5px;
+        }
+
+        .shop a {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Men's</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Women's</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Kid's</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">Pages</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="products.html">Products</a></li>
+                                    <li><a href="single-product.html">Single Product</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <a href="javascript:;">Features</a>
+                                <ul>
+                                    <li><a href="#">Features Page 1</a></li>
+                                    <li><a href="#">Features Page 2</a></li>
+                                    <li><a href="#">Features Page 3</a></li>
+                                    <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template
+                                            Page 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="scroll-to-section"><a href="index.html">Explore</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>Product</h2>
+                        <span>Awesome &amp; Creative HTML CSS layout by TemplateMo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <div class="container">
+        <div class="table-wrapper">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr class="bg-dark text-light">
+                        <th class="text-center">Image</th>
+                        <th class="ms-2">Name</th>
+                        <th>Price</th>
+                        <th class="text-center">Qty</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="record"> </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Total :-</td>
+                        <td id="finaltotal"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="shop">
+            <a href="index.html" class="text-dark fs-1">Continues Order</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                        </div>
+                        <ul>
+                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
+                            <li><a href="#">hexashop@company.com</a></li>
+                            <li><a href="#">010-020-0340</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Shopping &amp; Categories</h4>
+                    <ul>
+                        <li><a href="#">Men’s Shopping</a></li>
+                        <li><a href="#">Women’s Shopping</a></li>
+                        <li><a href="#">Kid's Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved.
+
+                            <br>Design: <a href="https://templatemo.com" target="_parent"
+                                title="free css templates">TemplateMo</a>
+                        </p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/quantity.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    const viewcart = () => {
+        let total = 0;
+        let val = JSON.parse(localStorage.getItem('data'));
+        let tbl = "";
+        val.map((v) => {
+            total = total + (v.price * v.qty);
+            tbl += `
+                    <tr>
+                        <td><img width="200" src="${v.img}"></td>
+                        <td>${v.name}</td>
+                        <td>${v.price}</td>
+                        <td>
+                        <div class="qty-container">
+                            <input type="number" id="qty_${v.id}" name="qty" value="${v.qty}" onchange="edit(${v.id})" class="input-qty"/>
+	                    </div>
+                        </td>
+                        <td>${v.price * v.qty}</td>
+                        
+                        <td>
+    <a href="#editEmployeeModal" onclick="editdata(${v.id})" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+    <a href="#deleteEmployeeModal" onclick="deletdata(${v.id})" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+  </td>
+                    </tr>
+            `
+        });
+        document.getElementById('record').innerHTML = tbl;
+        document.getElementById('finaltotal').innerHTML = total;
+    }
+
+    viewcart();
+
+    const deletdata = (id) => {
+        let data = JSON.parse(localStorage.getItem('data'));
+        let ans = data.filter((val) => {
+            return val.id != id;
+        });
+        localStorage.setItem('data', JSON.stringify(ans));
+        alert("user succefully deletdata");
+        viewcart();
+    }
+
+    const editdata = (id) => {
+        let qty = parseInt(document.getElementById('qty_' + id).value);
+        if (qty > 0) {
+
+            let allcart = JSON.parse(localStorage.getItem('data'));
+
+            allcart.filter((val) => {
+                if (val.id == id) {
+                    val.qty = qty;
+                }
+                return val;
+            });
+            localStorage.setItem('data', JSON.stringify(allcart));
+            viewcart();
+        } else {
+            document.getElementById('qty' + id).value = 0;
+            alert("something wrong!!");
+        }
+    }
+
+    const edit = (id) => {
+        let qty = document.getElementById('qty_' + id).value;
+        if (qty > 0) {
+            let allcart = JSON.parse(localStorage.getItem('data'));
+
+            allcart.filter((val) => {
+                if (val.id == id) {
+                    val.qty = qty;
+                }
+                return val;
+            });
+            localStorage.setItem('data', JSON.stringify(allcart));
+            viewcart();
+        } else {
+            alert("something wrong!!");
+        }
+    }
+
+</script>
